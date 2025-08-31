@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Toán Học Lớp 1</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6366F1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Toán Học">
+    <meta name="description" content="Trò chơi toán học vui nhộn cho học sinh lớp 1">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSIxOTIiIHkyPSIxOTIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzYzNjZGMSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QjVDRjYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSI5NiIgeT0iMTEwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn46vPC90ZXh0Pgo8dGV4dCB4PSI5NiIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VG/DoW4gSOG7jWM8L3RleHQ+Cjwvc3ZnPgo=">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSIxOTIiIHkyPSIxOTIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzYzNjZGMSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QjVDRjYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSI5NiIgeT0iMTEwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn46vPC90ZXh0Pgo8dGV4dCB4PSI5NiIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VG/DoW4gSOG7jWM8L3RleHQ+Cjwvc3ZnPgo=">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+        .bounce-in {
+            animation: bounceIn 0.6s ease-out;
+        }
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+        .celebrate {
+            animation: celebrate 0.8s ease-out;
+        }
+        .confetti {
+            animation: confetti 2s ease-out;
+        }
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+        .rainbow {
+            animation: rainbow 2s linear infinite;
+        }
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .medal-shine {
+            animation: medalShine 2s ease-in-out infinite;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        @keyframes celebrate {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.1) rotate(-5deg); }
+            75% { transform: scale(1.1) rotate(5deg); }
+        }
+        @keyframes confetti {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes medalShine {
+            0%, 100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+            50% { transform: scale(1.1) rotate(5deg); filter: brightness(1.3); }
+        }
+        .photo-preview {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-400 via-pink-400 to-blue-400 min-h-screen">
+    <!-- PWA Install Prompt -->
+    <div id="installPrompt" style="display: none; position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <button id="installBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg text-sm">
+            📱 Cài đặt ứng dụng
+        </button>
+    </div>
+
+    <!-- Registration Screen -->
+    <div id="registrationScreen" class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg float">
+                🎓 Đăng Ký Tham Gia 🎓
+            </h1>
+            <p class="text-white text-xl mb-6">Hãy cho chúng tôi biết thông tin của bạn!</p>
+        </div>
+
+        <div class="max-w-md mx-auto">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 bounce-in">
+                <div class="text-center mb-6">
+                    <div class="text-6xl mb-4">📝</div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Thông tin học sinh</h2>
+                </div>
+
+                <!-- Photo Upload -->
+                <div class="text-center mb-6">
+                    <div class="mb-4">
+                        <img id="photoPreview" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiNGM0Y0RjYiLz4KPHN2ZyB4PSIzNSIgeT0iMzAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjOUI5QkEwIj4KPHA+8J+RpDwvcD4KPHN2Zz4KPC9zdmc+" 
+                             alt="Ảnh đại diện" class="photo-preview mx-auto mb-4">
+                    </div>
+                    <div class="file-input-wrapper">
+                        <label class="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 px-4 rounded-xl cursor-pointer transition-all duration-200 transform hover:scale-105">
+                            📷 Chọn ảnh của bạn
+                            <input type="file" id="photoInput" accept="image/*" onchange="handlePhotoUpload(event)">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Họ và tên:</label>
+                        <input type="text" id="studentName" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none text-lg" placeholder="Nhập họ tên của bạn">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Lớp:</label>
+                        <select id="studentClass" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none text-lg">
+                            <option value="">Chọn lớp</option>
+                            <option value="1A">Lớp 1A</option>
+                            <option value="1B">Lớp 1B</option>
+                            <option value="1C">Lớp 1C</option>
+                            <option value="1D">Lớp 1D</option>
+                            <option value="1E">Lớp 1E</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Tuổi:</label>
+                        <select id="studentAge" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none text-lg">
+                            <option value="">Chọn tuổi</option>
+                            <option value="6">6 tuổi</option>
+                            <option value="7">7 tuổi</option>
+                            <option value="8">8 tuổi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- High Score Display -->
+                <div id="highScoreDisplay" class="mt-6 p-4 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl border-2 border-yellow-300" style="display: none;">
+                    <div class="text-center">
+                        <div class="text-2xl mb-2">🏆</div>
+                        <p class="text-sm font-semibold text-gray-700">Điểm cao nhất của bạn:</p>
+                        <p class="text-2xl font-bold text-orange-600" id="highScoreText">0</p>
+                    </div>
+                </div>
+
+                <button onclick="startRegistration()" class="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white text-xl font-bold py-4 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-200 mt-6">
+                    🚀 Bắt đầu chơi!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="container mx-auto px-4 py-8" style="display: none;">
+        <!-- Student Info Header -->
+        <div class="text-center mb-4">
+            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4 inline-block">
+                <div class="flex items-center gap-4">
+                    <img id="gamePhotoDisplay" src="" alt="Ảnh học sinh" class="w-12 h-12 rounded-full border-2 border-white">
+                    <div class="text-white">
+                        <p class="font-bold" id="gameNameDisplay">Tên học sinh</p>
+                        <p class="text-sm" id="gameClassDisplay">Lớp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+                🎯 Trò Chơi Toán Học 🎯
+            </h1>
+            <div class="flex justify-center gap-4 mb-4">
+                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                    <p class="text-white text-lg font-semibold">Level: <span id="currentLevel" class="text-blue-300 text-2xl">1</span></p>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                    <p class="text-white text-lg font-semibold">Điểm số: <span id="score" class="text-yellow-300 text-2xl">0</span></p>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                    <button id="musicToggle" class="text-white text-2xl hover:scale-110 transition-transform duration-200" onclick="toggleMusic()">🎵</button>
+                </div>
+            </div>
+            <div class="bg-white/20 backdrop-blur-sm rounded-xl p-3 inline-block">
+                <p class="text-white text-sm font-medium" id="levelDescription">Level 1: Cộng trừ 1-5</p>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div class="max-w-2xl mx-auto">
+            <!-- Question Card -->
+            <div class="bg-white rounded-3xl shadow-2xl p-8 mb-6 bounce-in">
+                <div class="text-center">
+                    <div class="text-6xl mb-6 float" id="questionEmoji">🤔</div>
+                    <div class="text-3xl md:text-4xl font-bold text-gray-800 mb-8" id="question">
+                        Nhấn "Bắt đầu" để chơi!
+                    </div>
+                    
+                    <!-- Answer Options -->
+                    <div class="grid grid-cols-2 gap-4 mb-6" id="answerOptions" style="display: none;">
+                        <button class="answer-btn bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white text-2xl font-bold py-4 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-200" onclick="checkAnswer(this)">A</button>
+                        <button class="answer-btn bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white text-2xl font-bold py-4 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-200" onclick="checkAnswer(this)">B</button>
+                        <button class="answer-btn bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white text-2xl font-bold py-4 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-200" onclick="checkAnswer(this)">C</button>
+                        <button class="answer-btn bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 text-white text-2xl font-bold py-4 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-200" onclick="checkAnswer(this)">D</button>
+                    </div>
+
+                    <!-- Drag and Drop Area -->
+                    <div id="dragDropArea" class="mb-6" style="display: none;">
+                        <div class="text-center mb-4">
+                            <div id="dragDropQuestion" class="text-2xl font-bold text-gray-800 mb-4"></div>
+                            <div class="flex justify-center items-center gap-4 mb-6">
+                                <span class="text-3xl font-bold" id="dragNum1">5</span>
+                                <span class="text-3xl font-bold">+</span>
+                                <div id="dropZone" class="w-16 h-16 border-4 border-dashed border-blue-400 rounded-xl flex items-center justify-center bg-blue-50 text-2xl font-bold text-blue-600 transition-all duration-200">
+                                    ?
+                                </div>
+                                <span class="text-3xl font-bold">=</span>
+                                <span class="text-3xl font-bold" id="dragResult">8</span>
+                            </div>
+                            <div class="flex justify-center gap-3">
+                                <div class="drag-number bg-gradient-to-r from-pink-400 to-pink-500 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center cursor-pointer shadow-lg transform hover:scale-110 transition-all duration-200" draggable="true">1</div>
+                                <div class="drag-number bg-gradient-to-r from-green-400 to-green-500 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center cursor-pointer shadow-lg transform hover:scale-110 transition-all duration-200" draggable="true">2</div>
+                                <div class="drag-number bg-gradient-to-r from-blue-400 to-blue-500 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center cursor-pointer shadow-lg transform hover:scale-110 transition-all duration-200" draggable="true">3</div>
+                                <div class="drag-number bg-gradient-to-r from-orange-400 to-orange-500 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center cursor-pointer shadow-lg transform hover:scale-110 transition-all duration-200" draggable="true">4</div>
+                                <div class="drag-number bg-gradient-to-r from-purple-400 to-purple-500 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center cursor-pointer shadow-lg transform hover:scale-110 transition-all duration-200" draggable="true">5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start/Next Button -->
+                    <button id="startBtn" class="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl font-bold py-4 px-8 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-200" onclick="startGame()">
+                        🚀 Bắt đầu chơi!
+                    </button>
+                </div>
+            </div>
+
+            <!-- Feedback Area -->
+            <div id="feedback" class="text-center text-2xl font-bold text-white mb-4" style="display: none;"></div>
+            
+            <!-- Confetti Effect -->
+            <div id="confettiContainer" class="fixed inset-0 pointer-events-none z-50" style="display: none;"></div>
+
+            <!-- Progress -->
+            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                <div class="flex justify-between items-center text-white font-semibold">
+                    <span>Câu hỏi: <span id="currentQuestion">0</span>/10</span>
+                    <span>Đúng: <span id="correctAnswers" class="text-green-300">0</span></span>
+                </div>
+                <div class="w-full bg-white/30 rounded-full h-3 mt-2">
+                    <div id="progressBar" class="bg-gradient-to-r from-yellow-400 to-orange-400 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medal Award Screen -->
+    <div id="medalScreen" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50" style="display: none;">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-md mx-4 text-center bounce-in">
+            <div class="text-8xl mb-4 medal-shine" id="medalEmoji">🏆</div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4" id="medalTitle">Chúc mừng!</h2>
+            <div class="mb-4">
+                <img id="medalPhotoDisplay" src="" alt="Ảnh học sinh" class="w-20 h-20 rounded-full border-4 border-yellow-400 mx-auto mb-2">
+                <p class="text-xl font-bold text-gray-700" id="medalNameDisplay">Tên học sinh</p>
+                <p class="text-gray-600" id="medalClassDisplay">Lớp</p>
+            </div>
+            <div class="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl p-4 mb-6">
+                <p class="text-lg font-semibold text-gray-700">Điểm số đạt được:</p>
+                <p class="text-4xl font-bold text-orange-600" id="finalScore">0</p>
+                <div id="newRecordBadge" class="mt-2" style="display: none;">
+                    <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">🎉 KỶ LỤC MỚI!</span>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <button onclick="playAgain()" class="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105">
+                    🔄 Chơi lại
+                </button>
+                <button onclick="newStudent()" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105">
+                    👤 Học sinh khác
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(function(registration) {
+                        console.log('SW đã đăng ký thành công:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('SW đăng ký thất bại:', error);
+                    });
+            });
+        }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        const installPrompt = document.getElementById('installPrompt');
+        const installBtn = document.getElementById('installBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installPrompt.style.display = 'block';
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response: ${outcome}`);
+                deferredPrompt = null;
+                installPrompt.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA đã được cài đặt');
+            installPrompt.style.display = 'none';
+        });
+
+        // Game variables
+        let currentQuestionNum = 0;
+        let score = 0;
+        let correctCount = 0;
+        let currentAnswer = 0;
+        let gameStarted = false;
+        let currentLevel = 1;
+        let backgroundMusic = null;
+        let musicPlaying = false;
+
+        // Student data
+        let studentData = {
+            name: '',
+            class: '',
+            age: '',
+            photo: ''
+        };
+
+        const levels = [
+            { level: 1, name: "Level 1: Cộng trừ 1-5", minNum: 1, maxNum: 5, operations: ['add', 'subtract', 'count'] },
+            { level: 2, name: "Level 2: Cộng trừ 1-10", minNum: 1, maxNum: 10, operations: ['add', 'subtract', 'count', 'fill_blank'] },
+            { level: 3, name: "Level 3: Cộng trừ 1-15", minNum: 1, maxNum: 15, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] },
+            { level: 4, name: "Level 4: Cộng trừ 1-20", minNum: 1, maxNum: 20, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] },
+            { level: 5, name: "Level 5: Cộng trừ 1-30", minNum: 1, maxNum: 30, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] },
+            { level: 6, name: "Level 6: Cộng trừ 1-40", minNum: 1, maxNum: 40, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] },
+            { level: 7, name: "Level 7: Cộng trừ 1-50", minNum: 1, maxNum: 50, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] },
+            { level: 8, name: "Level 8: Cộng trừ 1-70", minNum: 1, maxNum: 70, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] },
+            { level: 9, name: "Level 9: Cộng trừ 1-85", minNum: 1, maxNum: 85, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] },
+            { level: 10, name: "Level 10: Cộng trừ 1-100", minNum: 1, maxNum: 100, operations: ['add', 'subtract', 'fill_blank', 'drag_drop'] }
+        ];
+
+        const questionTypes = [
+            { type: 'add', emoji: '➕', template: '{a} + {b} = ?' },
+            { type: 'subtract', emoji: '➖', template: '{a} - {b} = ?' },
+            { type: 'count', emoji: '🔢', template: 'Đếm số {emoji}: {items}' },
+            { type: 'fill_blank', emoji: '🔍', template: '{a} + ? = {result}' },
+            { type: 'drag_drop', emoji: '🎯', template: 'Kéo số đúng vào ô trống' }
+        ];
+
+        const countEmojis = ['🍎', '🌟', '🎈', '🐱', '🚗', '🎁', '🌸', '🦋'];
+
+        // Local Storage functions
+        function saveStudentData() {
+            localStorage.setItem('mathGameStudent', JSON.stringify(studentData));
+        }
+
+        function loadStudentData() {
+            const saved = localStorage.getItem('mathGameStudent');
+            if (saved) {
+                studentData = JSON.parse(saved);
+                return true;
+            }
+            return false;
+        }
+
+        function getHighScore() {
+            const key = `mathGameHighScore_${studentData.name}_${studentData.class}`;
+            return parseInt(localStorage.getItem(key)) || 0;
+        }
+
+        function saveHighScore(newScore) {
+            const key = `mathGameHighScore_${studentData.name}_${studentData.class}`;
+            const currentHigh = getHighScore();
+            if (newScore > currentHigh) {
+                localStorage.setItem(key, newScore.toString());
+                return true; // New record
+            }
+            return false;
+        }
+
+        // Photo upload handler
+        function handlePhotoUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const photoPreview = document.getElementById('photoPreview');
+                    photoPreview.src = e.target.result;
+                    studentData.photo = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Registration functions
+        function startRegistration() {
+            const name = document.getElementById('studentName').value.trim();
+            const studentClass = document.getElementById('studentClass').value;
+            const age = document.getElementById('studentAge').value;
+
+            if (!name || !studentClass || !age) {
+                alert('Vui lòng điền đầy đủ thông tin!');
+                return;
+            }
+
+            studentData.name = name;
+            studentData.class = studentClass;
+            studentData.age = age;
+
+            saveStudentData();
+            showGameScreen();
+        }
+
+        function showGameScreen() {
+            document.getElementById('registrationScreen').style.display = 'none';
+            document.getElementById('gameScreen').style.display = 'block';
+
+            // Update game header with student info
+            document.getElementById('gameNameDisplay').textContent = studentData.name;
+            document.getElementById('gameClassDisplay').textContent = studentData.class;
+            if (studentData.photo) {
+                document.getElementById('gamePhotoDisplay').src = studentData.photo;
+            }
+        }
+
+        function showRegistrationScreen() {
+            document.getElementById('gameScreen').style.display = 'none';
+            document.getElementById('registrationScreen').style.display = 'block';
+            
+            // Load existing data if available
+            if (loadStudentData()) {
+                document.getElementById('studentName').value = studentData.name;
+                document.getElementById('studentClass').value = studentData.class;
+                document.getElementById('studentAge').value = studentData.age;
+                if (studentData.photo) {
+                    document.getElementById('photoPreview').src = studentData.photo;
+                }
+                
+                // Show high score
+                const highScore = getHighScore();
+                if (highScore > 0) {
+                    document.getElementById('highScoreDisplay').style.display = 'block';
+                    document.getElementById('highScoreText').textContent = highScore;
+                }
+            }
+        }
+
+        // Medal and completion functions
+        function showMedalScreen() {
+            const isNewRecord = saveHighScore(score);
+            
+            document.getElementById('medalScreen').style.display = 'flex';
+            document.getElementById('medalPhotoDisplay').src = studentData.photo || document.getElementById('photoPreview').src;
+            document.getElementById('medalNameDisplay').textContent = studentData.name;
+            document.getElementById('medalClassDisplay').textContent = studentData.class;
+            document.getElementById('finalScore').textContent = score;
+
+            // Determine medal type based on score
+            let medalEmoji, medalTitle;
+            if (score >= 900) {
+                medalEmoji = '🥇';
+                medalTitle = 'Huy chương Vàng!';
+            } else if (score >= 700) {
+                medalEmoji = '🥈';
+                medalTitle = 'Huy chương Bạc!';
+            } else if (score >= 500) {
+                medalEmoji = '🥉';
+                medalTitle = 'Huy chương Đồng!';
+            } else {
+                medalEmoji = '🏆';
+                medalTitle = 'Giải khuyến khích!';
+            }
+
+            document.getElementById('medalEmoji').textContent = medalEmoji;
+            document.getElementById('medalTitle').textContent = medalTitle;
+
+            if (isNewRecord) {
+                document.getElementById('newRecordBadge').style.display = 'block';
+                createConfetti();
+            }
+        }
+
+        function playAgain() {
+            document.getElementById('medalScreen').style.display = 'none';
+            resetGame();
+        }
+
+        function newStudent() {
+            document.getElementById('medalScreen').style.display = 'none';
+            resetGame();
+            showRegistrationScreen();
+        }
+
+        function resetGame() {
+            currentQuestionNum = 0;
+            score = 0;
+            correctCount = 0;
+            currentLevel = 1;
+            gameStarted = false;
+            
+            document.getElementById('score').textContent = '0';
+            document.getElementById('currentLevel').textContent = '1';
+            document.getElementById('levelDescription').textContent = levels[0].name;
+            document.getElementById('correctAnswers').textContent = '0';
+            document.getElementById('currentQuestion').textContent = '0';
+            document.getElementById('progressBar').style.width = '0%';
+            document.getElementById('startBtn').style.display = 'block';
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('answerOptions').style.display = 'none';
+            document.getElementById('dragDropArea').style.display = 'none';
+            
+            document.getElementById('questionEmoji').textContent = '🤔';
+            document.getElementById('question').textContent = 'Nhấn "Bắt đầu" để chơi!';
+        }
+
+        // Audio functions
+        function createBeep(frequency, duration, type = 'sine') {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = frequency;
+                oscillator.type = type;
+                
+                gainNode.gain.setValueAtTime(0.5, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + duration);
+            } catch (e) {
+                console.log('Âm thanh không được hỗ trợ');
+            }
+        }
+        
+        function createBackgroundMusic() {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                const melody = [
+                    { freq: 523, duration: 0.5 }, // C5
+                    { freq: 587, duration: 0.5 }, // D5
+                    { freq: 659, duration: 0.5 }, // E5
+                    { freq: 698, duration: 0.5 }, // F5
+                    { freq: 784, duration: 0.5 }, // G5
+                    { freq: 659, duration: 0.5 }, // E5
+                    { freq: 523, duration: 1.0 }, // C5
+                    { freq: 587, duration: 0.5 }, // D5
+                    { freq: 659, duration: 0.5 }, // E5
+                    { freq: 523, duration: 1.0 }  // C5
+                ];
+                
+                let currentTime = audioContext.currentTime;
+                
+                function playMelody() {
+                    if (!musicPlaying) return;
+                    
+                    melody.forEach((note, index) => {
+                        const oscillator = audioContext.createOscillator();
+                        const gainNode = audioContext.createGain();
+                        
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+                        
+                        oscillator.frequency.value = note.freq;
+                        oscillator.type = 'triangle';
+                        
+                        gainNode.gain.setValueAtTime(0.1, currentTime);
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, currentTime + note.duration);
+                        
+                        oscillator.start(currentTime);
+                        oscillator.stop(currentTime + note.duration);
+                        
+                        currentTime += note.duration;
+                    });
+                    
+                    setTimeout(() => {
+                        if (musicPlaying) {
+                            currentTime = audioContext.currentTime + 0.5;
+                            playMelody();
+                        }
+                    }, (currentTime - audioContext.currentTime + 1) * 1000);
+                }
+                
+                playMelody();
+                
+            } catch (e) {
+                console.log('Nhạc nền không được hỗ trợ');
+            }
+        }
+        
+        function toggleMusic() {
+            const musicToggle = document.getElementById('musicToggle');
+            
+            if (musicPlaying) {
+                musicPlaying = false;
+                musicToggle.textContent = '🔇';
+                musicToggle.title = 'Bật nhạc nền';
+            } else {
+                musicPlaying = true;
+                musicToggle.textContent = '🎵';
+                musicToggle.title = 'Tắt nhạc nền';
+                createBackgroundMusic();
+            }
+        }
+        
+        function playCorrectSound() {
+            // Tiếng vỗ tay (âm thanh ngắn, sắc)
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    createBeep(800 + Math.random() * 400, 0.1, 'square');
+                }, i * 100);
+            }
+            
+            // Tiếng reo hò (âm thanh cao, vui vẻ)
+            setTimeout(() => {
+                createBeep(1000, 0.3, 'sine');
+                setTimeout(() => createBeep(1200, 0.3, 'sine'), 150);
+                setTimeout(() => createBeep(1400, 0.4, 'sine'), 300);
+            }, 300);
+        }
+        
+        function playWrongSound() {
+            // Âm thanh thất bại kiểu Mario (to hơn, dramatic hơn)
+            createBeep(330, 0.3, 'square'); // E4
+            setTimeout(() => createBeep(311, 0.3, 'square'), 150); // Eb4
+            setTimeout(() => createBeep(294, 0.3, 'square'), 300); // D4
+            setTimeout(() => createBeep(262, 0.3, 'square'), 450); // C4
+            setTimeout(() => createBeep(220, 0.5, 'square'), 600); // A3
+            setTimeout(() => createBeep(196, 0.8, 'triangle'), 800); // G3 - kéo dài
+        }
+        
+        function playStartSound() {
+            createBeep(440, 0.2);
+            setTimeout(() => createBeep(554, 0.2), 150);
+            setTimeout(() => createBeep(659, 0.3), 300);
+        }
+        
+        function createConfetti() {
+            const container = document.getElementById('confettiContainer');
+            container.style.display = 'block';
+            container.innerHTML = '';
+            
+            const colors = ['🎉', '🎊', '⭐', '🌟', '✨', '🎈', '🎁', '🏆'];
+            
+            for (let i = 0; i < 20; i++) {
+                const confetti = document.createElement('div');
+                confetti.textContent = colors[Math.floor(Math.random() * colors.length)];
+                confetti.className = 'confetti absolute text-2xl';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(confetti);
+            }
+            
+            setTimeout(() => {
+                container.style.display = 'none';
+            }, 3000);
+        }
+
+        // Game logic functions
+        function generateQuestion() {
+            const level = levels[currentLevel - 1];
+            const availableOperations = level.operations;
+            const operationType = availableOperations[Math.floor(Math.random() * availableOperations.length)];
+            const questionType = questionTypes.find(q => q.type === operationType);
+            
+            const questionEmoji = document.getElementById('questionEmoji');
+            const questionText = document.getElementById('question');
+            const answerOptions = document.getElementById('answerOptions');
+            const dragDropArea = document.getElementById('dragDropArea');
+            
+            answerOptions.style.display = 'none';
+            dragDropArea.style.display = 'none';
+            
+            questionEmoji.textContent = questionType.emoji;
+            
+            if (questionType.type === 'add') {
+                const a = Math.floor(Math.random() * (level.maxNum - level.minNum + 1)) + level.minNum;
+                const b = Math.floor(Math.random() * (level.maxNum - level.minNum + 1)) + level.minNum;
+                currentAnswer = a + b;
+                questionText.textContent = `${a} + ${b} = ?`;
+                answerOptions.style.display = 'grid';
+                generateAnswerOptions();
+            } else if (questionType.type === 'subtract') {
+                const a = Math.floor(Math.random() * (level.maxNum - level.minNum + 1)) + level.minNum;
+                const b = Math.floor(Math.random() * a) + 1;
+                currentAnswer = a - b;
+                questionText.textContent = `${a} - ${b} = ?`;
+                answerOptions.style.display = 'grid';
+                generateAnswerOptions();
+            } else if (questionType.type === 'count') {
+                const emoji = countEmojis[Math.floor(Math.random() * countEmojis.length)];
+                const count = Math.floor(Math.random() * Math.min(10, level.maxNum)) + 2;
+                currentAnswer = count;
+                const items = emoji.repeat(count);
+                questionText.innerHTML = `Đếm số ${emoji}:<br><span class="text-4xl">${items}</span>`;
+                answerOptions.style.display = 'grid';
+                generateAnswerOptions();
+            } else if (questionType.type === 'fill_blank') {
+                const result = Math.floor(Math.random() * (level.maxNum - level.minNum + 1)) + level.minNum;
+                const a = Math.floor(Math.random() * result) + 1;
+                currentAnswer = result - a;
+                questionText.textContent = `${a} + ? = ${result}`;
+                answerOptions.style.display = 'grid';
+                generateAnswerOptions();
+            } else if (questionType.type === 'drag_drop') {
+                const result = Math.floor(Math.random() * (level.maxNum - level.minNum + 1)) + level.minNum;
+                const a = Math.floor(Math.random() * result) + 1;
+                currentAnswer = result - a;
+                questionText.textContent = 'Kéo số đúng vào ô trống';
+                dragDropArea.style.display = 'block';
+                setupDragDrop(a, result);
+            }
+        }
+
+        function generateAnswerOptions() {
+            const buttons = document.querySelectorAll('.answer-btn');
+            const correctIndex = Math.floor(Math.random() * 4);
+            const options = [];
+            const level = levels[currentLevel - 1];
+            
+            options[correctIndex] = currentAnswer;
+            
+            const range = Math.max(6, Math.floor(level.maxNum / 10));
+            for (let i = 0; i < 4; i++) {
+                if (i !== correctIndex) {
+                    let wrongAnswer;
+                    let attempts = 0;
+                    do {
+                        wrongAnswer = currentAnswer + Math.floor(Math.random() * (range * 2)) - range;
+                        attempts++;
+                        if (attempts > 20) {
+                            wrongAnswer = Math.floor(Math.random() * (level.maxNum * 2));
+                            break;
+                        }
+                    } while (wrongAnswer === currentAnswer || wrongAnswer < 0 || options.includes(wrongAnswer));
+                    options[i] = wrongAnswer;
+                }
+            }
+            
+            buttons.forEach((btn, index) => {
+                if (btn && options[index] !== undefined) {
+                    btn.textContent = options[index];
+                    btn.dataset.answer = options[index];
+                    btn.disabled = false;
+                    btn.className = btn.className.replace(/bg-red-500|bg-green-500/, btn.className.includes('from-green-') ? 'from-green-400 to-green-500' : 
+                        btn.className.includes('from-blue-') ? 'from-blue-400 to-blue-500' :
+                        btn.className.includes('from-orange-') ? 'from-orange-400 to-orange-500' : 'from-purple-400 to-purple-500');
+                }
+            });
+        }
+
+        function checkAnswer(button) {
+            const selectedAnswer = parseInt(button.dataset.answer);
+            const feedback = document.getElementById('feedback');
+            const buttons = document.querySelectorAll('.answer-btn');
+            
+            buttons.forEach(btn => btn.disabled = true);
+            
+            if (selectedAnswer === currentAnswer) {
+                button.className = button.className.replace(/from-\w+-\d+\s+to-\w+-\d+/, 'from-green-500 to-green-600');
+                feedback.textContent = '🎉 Chính xác! Giỏi lắm!';
+                feedback.className = 'text-center text-2xl font-bold text-green-300 mb-4 celebrate';
+                score += 10;
+                correctCount++;
+                document.getElementById('score').textContent = score;
+                document.getElementById('correctAnswers').textContent = correctCount;
+                
+                playCorrectSound();
+                createConfetti();
+            } else {
+                button.className = button.className.replace(/from-\w+-\d+\s+to-\w+-\d+/, 'from-red-500 to-red-600');
+                button.classList.add('shake');
+                feedback.textContent = `❌ Chưa đúng! Đáp án là ${currentAnswer}`;
+                feedback.className = 'text-center text-2xl font-bold text-red-300 mb-4';
+                
+                playWrongSound();
+                
+                buttons.forEach(btn => {
+                    if (parseInt(btn.dataset.answer) === currentAnswer) {
+                        btn.className = btn.className.replace(/from-\w+-\d+\s+to-\w+-\d+/, 'from-green-500 to-green-600');
+                    }
+                });
+            }
+            
+            feedback.style.display = 'block';
+            
+            setTimeout(() => {
+                nextQuestion();
+            }, 2000);
+        }
+
+        function nextQuestion() {
+            if (!gameStarted) return;
+            
+            if (currentQuestionNum >= 10) {
+                levelComplete();
+                return;
+            }
+            
+            currentQuestionNum++;
+            document.getElementById('currentQuestion').textContent = currentQuestionNum;
+            document.getElementById('progressBar').style.width = (currentQuestionNum / 10) * 100 + '%';
+            
+            document.getElementById('feedback').style.display = 'none';
+            
+            setTimeout(() => {
+                if (gameStarted) {
+                    generateQuestion();
+                }
+            }, 100);
+        }
+        
+        function levelComplete() {
+            const questionEmoji = document.getElementById('questionEmoji');
+            const questionText = document.getElementById('question');
+            const answerOptions = document.getElementById('answerOptions');
+            const dragDropArea = document.getElementById('dragDropArea');
+            const startBtn = document.getElementById('startBtn');
+            const feedback = document.getElementById('feedback');
+            
+            answerOptions.style.display = 'none';
+            dragDropArea.style.display = 'none';
+            feedback.style.display = 'none';
+            
+            if (currentLevel < 10) {
+                questionEmoji.textContent = '🎉';
+                questionText.innerHTML = `Hoàn thành Level ${currentLevel}!<br><span class="text-2xl">Điểm số: ${score}</span><br><span class="text-lg">Chuẩn bị cho Level ${currentLevel + 1}...</span>`;
+                startBtn.textContent = `🚀 Chơi Level ${currentLevel + 1}`;
+                startBtn.style.display = 'block';
+                
+                currentLevel++;
+                document.getElementById('currentLevel').textContent = currentLevel;
+                document.getElementById('levelDescription').textContent = levels[currentLevel - 1].name;
+                
+                gameStarted = false;
+            } else {
+                endGame();
+            }
+        }
+
+        function endGame() {
+            gameStarted = false;
+            showMedalScreen();
+        }
+
+        function setupDragDrop(num1, result) {
+            document.getElementById('dragNum1').textContent = num1;
+            document.getElementById('dragResult').textContent = result;
+            
+            const dropZone = document.getElementById('dropZone');
+            const dragNumbers = document.querySelectorAll('.drag-number');
+            
+            dropZone.textContent = '?';
+            dropZone.className = 'w-16 h-16 border-4 border-dashed border-blue-400 rounded-xl flex items-center justify-center bg-blue-50 text-2xl font-bold text-blue-600 transition-all duration-200';
+            
+            const newDropZone = dropZone.cloneNode(true);
+            dropZone.parentNode.replaceChild(newDropZone, dropZone);
+            
+            const allNumbers = [];
+            allNumbers.push(currentAnswer);
+            
+            const otherNumbers = [];
+            const maxRange = Math.max(20, currentAnswer + 10);
+            for (let i = 0; i <= maxRange; i++) {
+                if (i !== currentAnswer) {
+                    otherNumbers.push(i);
+                }
+            }
+            
+            for (let i = otherNumbers.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [otherNumbers[i], otherNumbers[j]] = [otherNumbers[j], otherNumbers[i]];
+            }
+            
+            for (let i = 0; i < 4 && i < otherNumbers.length; i++) {
+                allNumbers.push(otherNumbers[i]);
+            }
+            
+            while (allNumbers.length < 5) {
+                let randomNum = Math.floor(Math.random() * 15);
+                if (!allNumbers.includes(randomNum)) {
+                    allNumbers.push(randomNum);
+                }
+            }
+            
+            for (let i = allNumbers.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [allNumbers[i], allNumbers[j]] = [allNumbers[j], allNumbers[i]];
+            }
+            
+            if (!allNumbers.includes(currentAnswer)) {
+                allNumbers[4] = currentAnswer;
+            }
+            
+            dragNumbers.forEach((dragNum, index) => {
+                const newDragNum = dragNum.cloneNode(true);
+                dragNum.parentNode.replaceChild(newDragNum, dragNum);
+                
+                newDragNum.textContent = allNumbers[index];
+                newDragNum.style.opacity = '1';
+                newDragNum.style.transform = 'scale(1)';
+                
+                newDragNum.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', newDragNum.textContent);
+                    newDragNum.style.opacity = '0.5';
+                });
+                
+                newDragNum.addEventListener('dragend', (e) => {
+                    newDragNum.style.opacity = '1';
+                });
+            });
+            
+            const finalDropZone = document.getElementById('dropZone');
+            finalDropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                finalDropZone.className = 'w-16 h-16 border-4 border-dashed border-green-400 rounded-xl flex items-center justify-center bg-green-50 text-2xl font-bold text-green-600 transition-all duration-200';
+            });
+            
+            finalDropZone.addEventListener('dragleave', (e) => {
+                finalDropZone.className = 'w-16 h-16 border-4 border-dashed border-blue-400 rounded-xl flex items-center justify-center bg-blue-50 text-2xl font-bold text-blue-600 transition-all duration-200';
+            });
+            
+            finalDropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const droppedNumber = parseInt(e.dataTransfer.getData('text/plain'));
+                finalDropZone.textContent = droppedNumber;
+                
+                setTimeout(() => {
+                    if (gameStarted) {
+                        checkDragDropAnswer(droppedNumber);
+                    }
+                }, 500);
+            });
+        }
+        
+        function checkDragDropAnswer(droppedNumber) {
+            const feedback = document.getElementById('feedback');
+            const dropZone = document.getElementById('dropZone');
+            
+            if (droppedNumber === currentAnswer) {
+                dropZone.className = 'w-16 h-16 border-4 border-solid border-green-500 rounded-xl flex items-center justify-center bg-green-100 text-2xl font-bold text-green-700 celebrate';
+                feedback.textContent = '🎉 Chính xác! Giỏi lắm!';
+                feedback.className = 'text-center text-2xl font-bold text-green-300 mb-4 celebrate';
+                score += 10;
+                correctCount++;
+                document.getElementById('score').textContent = score;
+                document.getElementById('correctAnswers').textContent = correctCount;
+                
+                playCorrectSound();
+                createConfetti();
+            } else {
+                dropZone.className = 'w-16 h-16 border-4 border-solid border-red-500 rounded-xl flex items-center justify-center bg-red-100 text-2xl font-bold text-red-700 shake';
+                feedback.textContent = `❌ Chưa đúng! Đáp án là ${currentAnswer}`;
+                feedback.className = 'text-center text-2xl font-bold text-red-300 mb-4';
+                
+                playWrongSound();
+                
+                setTimeout(() => {
+                    dropZone.textContent = currentAnswer;
+                    dropZone.className = 'w-16 h-16 border-4 border-solid border-green-500 rounded-xl flex items-center justify-center bg-green-100 text-2xl font-bold text-green-700';
+                }, 1000);
+            }
+            
+            feedback.style.display = 'block';
+            
+            setTimeout(() => {
+                nextQuestion();
+            }, 2000);
+        }
+
+        function startGame() {
+            if (!gameStarted) {
+                currentQuestionNum = 0;
+                correctCount = 0;
+                gameStarted = true;
+                
+                playStartSound();
+                
+                document.getElementById('score').textContent = score;
+                document.getElementById('correctAnswers').textContent = '0';
+                document.getElementById('currentQuestion').textContent = '0';
+                document.getElementById('progressBar').style.width = '0%';
+                document.getElementById('startBtn').style.display = 'none';
+                document.getElementById('feedback').style.display = 'none';
+                
+                document.getElementById('answerOptions').style.display = 'none';
+                document.getElementById('dragDropArea').style.display = 'none';
+                
+                setTimeout(() => {
+                    nextQuestion();
+                }, 500);
+            }
+        }
+
+        // Initialize app
+        window.onload = function() {
+            showRegistrationScreen();
+        };
+    </script>
+
+    <!-- PWA Manifest Data -->
+    <script type="application/json" id="manifest-data">
+    {
+        "name": "Trò Chơi Toán Học Lớp 1",
+        "short_name": "Toán Học",
+        "description": "Trò chơi toán học vui nhộn cho học sinh lớp 1",
+        "start_url": "./index.html",
+        "display": "standalone",
+        "background_color": "#8B5CF6",
+        "theme_color": "#6366F1",
+        "orientation": "portrait-primary",
+        "scope": "./",
+        "lang": "vi",
+        "categories": ["education", "games"],
+        "icons": [
+            {
+                "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMTIiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSI3MiIgeTI9IjcyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2MzY2RjEiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOEI1Q0Y2Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHR4dCB4PSIzNiIgeT0iNDUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPvCfjq88L3R4dD4KPC9zdmc+Cg==",
+                "sizes": "72x72",
+                "type": "image/svg+xml",
+                "purpose": "maskable any"
+            },
+            {
+                "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSIxOTIiIHkyPSIxOTIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzYzNjZGMSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QjVDRjYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSI5NiIgeT0iMTEwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn46vPC90ZXh0Pgo8dGV4dCB4PSI5NiIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VG/DoW4gSOG7jWM8L3RleHQ+Cjwvc3ZnPgo=",
+                "sizes": "192x192",
+                "type": "image/svg+xml",
+                "purpose": "maskable any"
+            },
+            {
+                "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSI1MTIiIHkyPSI1MTIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzYzNjZGMSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QjVDRjYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSIyNTYiIHk9IjMwMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5MiIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPvCfjq88L3R4dD4KPHR4dCB4PSIyNTYiIHk9IjM4MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlRvw6FuIEjhu41jPC90eHQ+Cjwvc3ZnPgo=",
+                "sizes": "512x512",
+                "type": "image/svg+xml",
+                "purpose": "maskable any"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Generate manifest.json dynamically -->
+    <script>
+        // Create manifest.json file dynamically
+        const manifestData = JSON.parse(document.getElementById('manifest-data').textContent);
+        const manifestBlob = new Blob([JSON.stringify(manifestData, null, 2)], {type: 'application/json'});
+        const manifestURL = URL.createObjectURL(manifestBlob);
+        document.querySelector('link[rel="manifest"]').href = manifestURL;
+
+        // Create service worker dynamically
+        const swCode = `
+const CACHE_NAME = 'toan-hoc-v1';
+const urlsToCache = [
+  './',
+  './index.html',
+  'https://cdn.tailwindcss.com',
+  'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap'
+];
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Cache đã mở');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+        `;
+
+        // Register service worker with inline code
+        if ('serviceWorker' in navigator) {
+            const swBlob = new Blob([swCode], {type: 'application/javascript'});
+            const swURL = URL.createObjectURL(swBlob);
+            
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register(swURL)
+                    .then(function(registration) {
+                        console.log('SW đã đăng ký thành công:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('SW đăng ký thất bại:', error);
+                    });
+            });
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9778f1b196e31111',t:'MTc1NjYwNTcyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
